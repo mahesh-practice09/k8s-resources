@@ -11,9 +11,11 @@ spec:
       name: nginx-logs
   - image: almalinux:9
     name: almalinux 
+    command: ["sleep","2000"]
     volumeMounts:
     - mountPath: /mnt/nginx-logs
       name: nginx-logs
+      readOnly: true
   volumes:
   - name: nginx-logs
     emptyDir:
