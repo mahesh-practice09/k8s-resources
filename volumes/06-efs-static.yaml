@@ -45,4 +45,4 @@ spec:
   volumes:
   - name: html-data
     persistentVolumeClaim:
-      claimName: ebs-static
+      claimName: efs-static
