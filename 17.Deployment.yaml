@@ -32,3 +32,19 @@ spec:
          - name: nginx 
            #image: nginx 
            image: nginx:latest
+
+---
+
+apiVersion: v1 
+kind: Service 
+metadata:
+  name: nginx 
+spec:
+  selector:
+      project: roboshop 
+      component: frontend 
+      
+  ports:
+    - protocol: TCP 
+      port: 80  # Service Port
+      targetPort: 80 # Container Port
